@@ -17,13 +17,12 @@
         <input type="color" id="colorpicker" value="#0000ff">
         <input type="button" value="eraser">
         <div class="sliderdiv">
-            <input type="range" id="slider" min="2" max="100" value="16">
-            <div class="value">16</div>
+            <input type="range" id="slider" min="2" max="100" value="16" oninput="sliderFunc(this.value)">
+            <div id="value">16</div>
         </div>
     </div>
 
     <div class="pad">
-        
     </div>
 
     <script src="script.js"></script>

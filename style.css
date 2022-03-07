@@ -23,6 +23,13 @@ body {
     gap: 8px;
 }
 
+.divs {
+    height: 7vmax;
+    width: 7vmax;
+    border-radius: 2px;
+    background-color: #6d5dfc;
+}
+
 #value {
     margin: 5px;
 }
@@ -39,11 +46,10 @@ body {
 }
 
 .grid {
-    margin: 0;
-    padding: 0;
-    border: none;
-    outline: 1px solid;
-    display: inline-block;
+    width: auto;
+    height: auto;
+    display: grid;
+    border: 2px solid;
 }
 
 

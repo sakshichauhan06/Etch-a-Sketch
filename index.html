@@ -11,18 +11,19 @@
     <div class="banner">etch a sketch</div>
 
     <div class="btns">
-        <input type="button" value="reset">
-        <input type="button" value="black">
-        <input type="button" value="RGB">
-        <input type="color" id="colorpicker" value="#0000ff">
-        <input type="button" value="eraser">
+        <input type="button" value="reset" class="btn">
+        <input type="button" value="black" class="btn">
+        <input type="button" value="RGB" class="btn">
+        <input type="color" id="colorpicker" value="#e07a5f" class="btn">
+        <input type="button" value="eraser" class="btn">
         <div class="sliderdiv">
-            <input type="range" id="slider" min="2" max="100" value="16" oninput="sliderFun(this.value)">
+            <input type="range" id="slider" min="2" max="100" value="16" oninput="sliderFun(this.value); createGrid(this.value)" >
             <div id="value">16</div>
         </div>
     </div>
 
-    <div class="pad">
+    <div class="flex-container">
+        <div class="pad"></div>
     </div>
 
     <script src="script.js"></script>

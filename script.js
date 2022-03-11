@@ -13,6 +13,10 @@ function createGrid(size) {
     let amount = size * size;
     for(let i = 0; i < amount; i++) {
         let square = document.createElement("div");
+        square.classList.add('grid');
+        square.addEventListener('mouseover', () => {
+            square.style.backgroundColor = generateRandomColor();
+        })
         square.style.background = "#f4f1de";
         square.style.border = "0.3px solid"
         pad.insertAdjacentElement("beforeend", square);
@@ -20,5 +24,18 @@ function createGrid(size) {
 }
 
 createGrid(16);
+
+function resetFunc() {
+    square.style.background = "#f4f1de";
+    console.log('square.style.background');
+}
+
+function generateRandomColor() {
+    var randomColor = '#'+Math.floor(Math.random()*16777215).toString(16);
+    return randomColor;
+}
+
+
+
 
 

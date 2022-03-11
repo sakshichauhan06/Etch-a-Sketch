@@ -1,3 +1,4 @@
+let color = 0;
 
 function sliderFun(val) {
     document.getElementById("value").innerHTML = val;
@@ -15,7 +16,16 @@ function createGrid(size) {
         let square = document.createElement("div");
         square.classList.add('grid');
         square.addEventListener('mouseover', () => {
-            square.style.backgroundColor = generateRandomColor();
+            if(color == 0) {
+                square.style.backgroundColor = generateRandomColor();
+            } else if(color == 1) {
+                square.style.backgroundColor = "#000000"
+            } else if(color == 2) {
+                var pick = document.getElementById("colorpicker").value;
+                square.style.backgroundColor = pick;
+            } else if(color == 3) {
+                square.style.background = "#f4f1de";
+            }
         })
         square.style.background = "#f4f1de";
         square.style.border = "0.3px solid"
@@ -25,9 +35,9 @@ function createGrid(size) {
 
 createGrid(16);
 
-function resetFunc() {
-    square.style.background = "#f4f1de";
-    console.log('square.style.background');
+function resetFun() {
+    var resetBtn = document.querySelectorAll('.grid');
+    resetBtn.forEach(el => el.style.backgroundColor = "#f4f1de");
 }
 
 function generateRandomColor() {
@@ -35,7 +45,21 @@ function generateRandomColor() {
     return randomColor;
 }
 
+function rgbFun() {
+    color = 0;
+}
 
+function blackFun() {
+    color = 1;
+}
+
+function colorPickerFun() {
+    color = 2;
+}
+
+function eraserFun() {
+    color = 3;
+}
 
 
 

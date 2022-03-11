@@ -12,10 +12,10 @@
 
     <div class="btns">
         <input type="button" value="reset" class="btn" onclick="resetFun()">
-        <input type="button" value="black" class="btn">
-        <input type="button" value="RGB" class="btn">
-        <input type="color" id="colorpicker" value="#e07a5f" class="btn">
-        <input type="button" value="eraser" class="btn">
+        <input type="button" value="black" class="btn" onclick="blackFun()">
+        <input type="button" value="RGB" class="btn" onclick="rgbFun()">
+        <input type="color" id="colorpicker" value="#e07a5f" class="btn" onclick="colorPickerFun()">
+        <input type="button" value="eraser" class="btn" onclick="eraserFun()">
         <div class="sliderdiv">
             <input type="range" id="slider" min="2" max="100" value="16" oninput="sliderFun(this.value); createGrid(this.value)" >
             <div id="value">16</div>
